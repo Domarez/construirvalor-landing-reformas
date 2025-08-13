@@ -37,10 +37,10 @@ const Testimonials = () => {
     <section id="testimonios" className="section-container bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="section-title fade-in-up">
+          <h2 className="section-title fade-in-up stagger-1">
             Lo que dicen nuestros clientes
           </h2>
-          <p className="section-subtitle mx-auto fade-in-up animation-delay-200">
+          <p className="section-subtitle mx-auto fade-in-up stagger-2">
             Testimonios reales de empresas e instituciones que confían en nosotros
           </p>
         </div>
@@ -49,20 +49,22 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className={`p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 fade-in-up animation-delay-${(index + 1) * 100}`}
+              className={`p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                index % 2 === 0 ? 'float-in' : 'scale-in'
+              } stagger-${index + 3}`}
             >
               <CardContent className="space-y-4 p-0">
-                <div className="flex text-yellow-400 mb-4">
+                <div className="flex text-yellow-400 mb-4 fade-in-right stagger-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={20} fill="currentColor" />
                   ))}
                 </div>
                 
-                <p className="text-neutral-700 leading-relaxed italic text-lg">
+                <p className="text-neutral-700 leading-relaxed italic text-lg fade-in-up stagger-2">
                   "{testimonial.content}"
                 </p>
                 
-                <div className="pt-4 border-t border-neutral-200">
+                <div className="pt-4 border-t border-neutral-200 fade-in-left stagger-3">
                   <p className="font-semibold text-neutral-800">
                     {testimonial.author}
                   </p>

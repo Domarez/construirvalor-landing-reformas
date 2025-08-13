@@ -37,26 +37,26 @@ const FAQ = () => {
     <section className="section-container bg-background">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="section-title fade-in-up">
+          <h2 className="section-title fade-in-up stagger-1">
             Preguntas Frecuentes
           </h2>
-          <p className="section-subtitle mx-auto fade-in-up animation-delay-200">
+          <p className="section-subtitle mx-auto fade-in-up stagger-2">
             Resolvemos las dudas más comunes sobre nuestros servicios
           </p>
         </div>
 
-        <div className="fade-in-up animation-delay-300 mb-12">
+        <div className="rotate-in stagger-3 mb-12">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-neutral-200 rounded-lg px-6 shadow-sm hover:shadow-md transition-all duration-300"
+                className={`border border-neutral-200 rounded-lg px-6 shadow-sm hover:shadow-md transition-all duration-300 float-in stagger-${index + 4}`}
               >
-                <AccordionTrigger className="text-left font-semibold text-lg text-neutral-800 hover:text-primary py-6">
+                <AccordionTrigger className="text-left font-semibold text-lg text-neutral-800 hover:text-primary py-6 fade-in-right stagger-1">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-700 pb-6 text-base leading-relaxed">
+                <AccordionContent className="text-neutral-700 pb-6 text-base leading-relaxed fade-in-up stagger-2">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

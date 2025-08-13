@@ -49,10 +49,10 @@ const Services = () => {
     <section id="servicios" className="section-container bg-gradient-to-b from-neutral-50 to-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="section-title fade-in-up">
+          <h2 className="section-title fade-in-up stagger-1">
             Nuestros Servicios
           </h2>
-          <p className="section-subtitle mx-auto fade-in-up animation-delay-200">
+          <p className="section-subtitle mx-auto fade-in-up stagger-2">
             Soluciones integrales para empresas e instituciones educativas
           </p>
         </div>
@@ -61,16 +61,18 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up animation-delay-${index * 200}`}
+              className={`overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${
+                index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'
+              } stagger-${index + 3}`}
             >
               <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <CardHeader className="p-0 mb-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
+                      <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
                         <service.icon className="text-primary" size={32} />
                       </div>
-                      <CardTitle className="text-2xl lg:text-3xl text-neutral-800">
+                      <CardTitle className="text-2xl lg:text-3xl text-neutral-800 fade-in-right stagger-2">
                         {service.title}
                       </CardTitle>
                     </div>
@@ -79,7 +81,7 @@ const Services = () => {
                   <CardContent className="p-0">
                     <ul className="space-y-4">
                       {service.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-3">
+                        <li key={itemIndex} className={`flex items-start gap-3 fade-in-up stagger-${itemIndex + 3}`}>
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-neutral-700 text-lg">{item}</span>
                         </li>
@@ -92,7 +94,9 @@ const Services = () => {
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-[300px] lg:h-full object-cover"
+                    className={`w-full h-[300px] lg:h-full object-cover ${
+                      index % 2 === 0 ? 'zoom-in' : 'rotate-in'
+                    } stagger-${index + 2}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
                 </div>

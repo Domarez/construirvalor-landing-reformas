@@ -22,23 +22,23 @@ const Features = () => {
     <section className="section-container bg-gradient-to-b from-neutral-50 to-background">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
-          <h2 className="section-title fade-in-up">
+          <h2 className="section-title fade-in-up stagger-1">
             ¿Qué incluye nuestro servicio?
           </h2>
         </div>
 
-        <Card className="shadow-2xl border-0 fade-in-up animation-delay-200">
+        <Card className="shadow-2xl border-0 zoom-in stagger-2">
           <CardContent className="p-8 md:p-12">
             <div className="grid gap-6">
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className={`flex items-center gap-4 p-4 rounded-lg hover:bg-primary-light/50 transition-all duration-300 fade-in-right animation-delay-${(index + 1) * 100}`}
+                  className={`flex items-center gap-4 p-4 rounded-lg hover:bg-primary-light/50 transition-all duration-300 slide-in-right stagger-${index + 3}`}
                 >
-                  <div className="bg-primary/10 p-2 rounded-full">
+                  <div className="bg-primary/10 p-2 rounded-full scale-in stagger-1">
                     <CheckCircle2 className="text-primary" size={24} />
                   </div>
-                  <span className="text-lg text-neutral-700 font-medium">
+                  <span className="text-lg text-neutral-700 font-medium fade-in-left stagger-2">
                     {feature}
                   </span>
                 </div>

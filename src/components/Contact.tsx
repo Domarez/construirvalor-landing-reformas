@@ -7,10 +7,10 @@ const Contact = () => {
     <section id="contacto" className="section-container bg-gradient-to-b from-neutral-50 to-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="section-title fade-in-up">
+          <h2 className="section-title fade-in-up stagger-1">
             ¿Querés una empresa que haga el trabajo en vez de complicarte la vida?
           </h2>
-          <p className="section-subtitle mx-auto fade-in-up animation-delay-200">
+          <p className="section-subtitle mx-auto fade-in-up stagger-2">
             En Construir Valor combinamos capacidad técnica, velocidad de respuesta y formalidad.
             Obras, mantenimiento o reformas: resolvemos con un solo equipo, desde el primer llamado.
           </p>
@@ -18,13 +18,13 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* CTA Section */}
-          <div className="space-y-8 fade-in-left">
-            <Card className="shadow-xl border-0 bg-primary text-primary-foreground">
+          <div className="space-y-8 slide-in-left stagger-3">
+            <Card className="shadow-xl border-0 bg-primary text-primary-foreground zoom-in stagger-1">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-semibold mb-6">
+                <h3 className="text-2xl font-semibold mb-6 fade-in-down stagger-1">
                   Solicitá tu presupuesto sin cargo
                 </h3>
-                <p className="text-primary-foreground/90 mb-8">
+                <p className="text-primary-foreground/90 mb-8 fade-in-up stagger-2">
                   Recibí tu diagnóstico técnico inicial completamente gratis. 
                   Nuestro equipo evaluará tu proyecto y te presentará una propuesta 
                   clara y detallada sin compromiso.
@@ -32,7 +32,7 @@ const Contact = () => {
                 <Button 
                   onClick={() => window.open('https://forms.clickup.com/90131266734/f/2ky3vz5e-6233/QTQTM1XATN9SHKOUUG', '_blank')}
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 inline-flex items-center gap-2"
+                  className="bg-white text-primary hover:bg-white/90 inline-flex items-center gap-2 scale-in stagger-3"
                 >
                   Solicitá tu presupuesto sin cargo
                   <ArrowRight size={18} />
@@ -54,16 +54,16 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8 fade-in-right">
-            <Card className="shadow-lg border-0">
+          <div className="space-y-8 slide-in-right stagger-4">
+            <Card className="shadow-lg border-0 rotate-in stagger-1">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-neutral-800 mb-6">
+                <h3 className="text-xl font-semibold text-neutral-800 mb-6 fade-in-up stagger-1">
                   Información de contacto
                 </h3>
                 
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                  <div className="flex items-center gap-4 fade-in-left stagger-2">
+                    <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
                       <Phone className="text-primary" size={24} />
                     </div>
                     <div>
@@ -72,8 +72,8 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                  <div className="flex items-center gap-4 fade-in-left stagger-3">
+                    <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
                       <Mail className="text-primary" size={24} />
                     </div>
                     <div>
@@ -82,8 +82,8 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                  <div className="flex items-center gap-4 fade-in-left stagger-4">
+                    <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
                       <MapPin className="text-primary" size={24} />
                     </div>
                     <div>

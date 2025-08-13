@@ -164,10 +164,49 @@ All colors MUST be HSL. Primary brand color: #4066ff
     animation: fadeInRight 0.8s ease-out forwards;
   }
 
+  .fade-in-down {
+    @apply opacity-0 -translate-y-8;
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
+
   .scale-in {
     @apply opacity-0 scale-95;
     animation: scaleIn 0.6s ease-out forwards;
   }
+
+  .slide-in-left {
+    @apply opacity-0 -translate-x-16;
+    animation: slideInLeft 1s ease-out forwards;
+  }
+
+  .slide-in-right {
+    @apply opacity-0 translate-x-16;
+    animation: slideInRight 1s ease-out forwards;
+  }
+
+  .zoom-in {
+    @apply opacity-0 scale-75;
+    animation: zoomIn 0.8s ease-out forwards;
+  }
+
+  .float-in {
+    @apply opacity-0 translate-y-12;
+    animation: floatIn 1.2s ease-out forwards;
+  }
+
+  .rotate-in {
+    @apply opacity-0;
+    transform: rotateY(-90deg);
+    animation: rotateIn 1s ease-out forwards;
+  }
+
+  /* Stagger animations for multiple elements */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
 
   /* Parallax container */
   .parallax-container {
@@ -219,10 +258,29 @@ All colors MUST be HSL. Primary brand color: #4066ff
   .animation-delay-500 {
     animation-delay: 0.5s;
   }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 0.7s;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
 }
 
 /* Custom keyframes */
 @keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -243,6 +301,20 @@ All colors MUST be HSL. Primary brand color: #4066ff
   }
 }
 
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes scaleIn {
   to {
     opacity: 1;
@@ -250,9 +322,34 @@ All colors MUST be HSL. Primary brand color: #4066ff
   }
 }
 
-/* Animation triggers */
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+/* Animation triggers for intersection observer */
 .fade-in-up.animate {
   animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-down.animate {
+  animation: fadeInDown 0.8s ease-out forwards;
 }
 
 .fade-in-left.animate {
@@ -263,6 +360,26 @@ All colors MUST be HSL. Primary brand color: #4066ff
   animation: fadeInRight 0.8s ease-out forwards;
 }
 
+.slide-in-left.animate {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right.animate {
+  animation: slideInRight 1s ease-out forwards;
+}
+
 .scale-in.animate {
   animation: scaleIn 0.6s ease-out forwards;
+}
+
+.zoom-in.animate {
+  animation: zoomIn 0.8s ease-out forwards;
+}
+
+.float-in.animate {
+  animation: floatIn 1.2s ease-out forwards;
+}
+
+.rotate-in.animate {
+  animation: rotateIn 1s ease-out forwards;
 }
