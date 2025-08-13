@@ -41,9 +41,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl md:text-2xl font-bold text-primary">
-              Construir Valor
-            </h1>
+            <img 
+              src="/lovable-uploads/91565941-6d44-41df-bc13-a36db91ddf80.png" 
+              alt="Construir Valor" 
+              className="h-8 md:h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Menu */}
