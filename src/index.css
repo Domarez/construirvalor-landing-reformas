@@ -2,39 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Construir Valor Design System - Professional Construction Company
+All colors MUST be HSL. Primary brand color: #4066ff
 */
 
 @layer base {
   :root {
+    /* Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 227 100% 62%; /* #4066ff */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 227 100% 55%;
+    --primary-light: 227 100% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 220 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 227 100% 62%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 227 100% 62%;
+
+    /* Professional Grays */
+    --neutral-50: 220 13% 97%;
+    --neutral-100: 220 13% 94%;
+    --neutral-200: 220 13% 87%;
+    --neutral-300: 220 9% 73%;
+    --neutral-400: 220 9% 46%;
+    --neutral-500: 220 9% 33%;
+    --neutral-600: 220 13% 25%;
+    --neutral-700: 220 15% 20%;
+    --neutral-800: 220 15% 15%;
+    --neutral-900: 220 15% 10%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-hero: linear-gradient(180deg, rgba(64, 102, 255, 0.1) 0%, rgba(64, 102, 255, 0.05) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(var(--neutral-50)) 0%, hsl(var(--background)) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-primary: 0 10px 25px -5px rgba(64, 102, 255, 0.25);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -102,4 +132,137 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-hero {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-primary transform hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium border border-border hover:bg-neutral-100 transition-all duration-300;
+  }
+
+  /* Animation utilities */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .fade-in-left {
+    @apply opacity-0 -translate-x-8;
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+
+  .fade-in-right {
+    @apply opacity-0 translate-x-8;
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+
+  .scale-in {
+    @apply opacity-0 scale-95;
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    @apply relative overflow-hidden;
+    perspective: 1000px;
+  }
+
+  .parallax-element {
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  /* Hero section styling */
+  .hero-background {
+    background: linear-gradient(135deg, rgba(64, 102, 255, 0.9) 0%, rgba(64, 102, 255, 0.7) 100%);
+  }
+
+  /* Section styling */
+  .section-container {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-800 mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-neutral-600 mb-8 max-w-3xl;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+}
+
+/* Custom keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation triggers */
+.fade-in-up.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left.animate {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right.animate {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.scale-in.animate {
+  animation: scaleIn 0.6s ease-out forwards;
 }
