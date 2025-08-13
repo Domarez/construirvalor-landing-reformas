@@ -47,7 +47,7 @@ const Benefits = () => {
               className={`text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 fade-in-up animation-delay-${(index + 1) * 100}`}
             >
               <CardContent className="space-y-4 p-0">
-                <div className="text-4xl mb-4">{benefit.emoji}</div>
+                
                 <benefit.icon className="mx-auto text-primary mb-4" size={32} />
                 <h3 className="text-xl font-semibold text-neutral-800 mb-3">
                   {benefit.title}
