@@ -35,7 +35,7 @@ const Hero = () => {
           
           <div className="fade-in-up animation-delay-400">
             <Button 
-              onClick={scrollToContact}
+              onClick={() => window.open('https://forms.clickup.com/90131266734/f/2ky3vz5e-6233/QTQTM1XATN9SHKOUUG', '_blank')}
               size="lg"
               className="btn-hero text-lg px-8 py-4 inline-flex items-center gap-2"
             >

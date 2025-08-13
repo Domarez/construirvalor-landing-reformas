@@ -49,7 +49,7 @@ const Features = () => {
 
         <div className="text-center mt-12 fade-in-up animation-delay-500">
           <Button 
-            onClick={scrollToContact}
+            onClick={() => window.open('https://forms.clickup.com/90131266734/f/2ky3vz5e-6233/QTQTM1XATN9SHKOUUG', '_blank')}
             size="lg"
             className="bg-primary hover:bg-primary-hover text-primary-foreground inline-flex items-center gap-2"
           >
