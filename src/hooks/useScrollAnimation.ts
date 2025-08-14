@@ -12,9 +12,7 @@ const useScrollAnimation = () => {
       'scale-in',
       'zoom-in',
       'float-in',
-      'rotate-in',
-      'rise-up-fast',
-      'rise-up-slow'
+      'rotate-in'
     ];
 
     const observer = new IntersectionObserver(

@@ -26,9 +26,7 @@ const ScrollObserver = ({ children, className = '' }: ScrollObserverProps) => {
               '.scale-in',
               '.zoom-in',
               '.float-in',
-              '.rotate-in',
-              '.rise-up-fast',
-              '.rise-up-slow'
+              '.rotate-in'
             ].join(', '));
 
             // Add animate class to trigger animations
@@ -48,9 +46,7 @@ const ScrollObserver = ({ children, className = '' }: ScrollObserverProps) => {
                 element.classList.contains('scale-in') ||
                 element.classList.contains('zoom-in') ||
                 element.classList.contains('float-in') ||
-                element.classList.contains('rotate-in') ||
-                element.classList.contains('rise-up-fast') ||
-                element.classList.contains('rise-up-slow')) {
+                element.classList.contains('rotate-in')) {
               element.classList.add('animate');
             }
           }
