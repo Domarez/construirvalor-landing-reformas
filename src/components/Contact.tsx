@@ -18,7 +18,7 @@ const Contact = () => {
           {/* CTA Section */}
           <div className="space-y-8 slide-in-left stagger-3">
             <Card className="shadow-xl border-0 bg-primary text-primary-foreground zoom-in stagger-1">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center flex flex-col items-center justify-center">
                 <h3 className="text-2xl font-semibold mb-6 fade-in-down stagger-1">
                   Solicitá tu presupuesto sin cargo
                 </h3>
