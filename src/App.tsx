@@ -16,8 +16,8 @@ const App = () => (
             <Sonner />
             <BrowserRouter basename="/reformas">
                 <Routes>
-                    <Route path="/" element={<Index />} /> {/* Cambia index por path="/" */}
-                    <Route path="/gracias" element={<ThankYou />} /> {/* Añade / al inicio */}
+                    <Route index element={<Index />} />
+                    <Route path="gracias" element={<ThankYou />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
