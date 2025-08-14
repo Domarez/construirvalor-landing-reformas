@@ -1,10 +1,8 @@
 import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
-
 const Contact = () => {
-  return (
-    <section id="contacto" className="section-container bg-gradient-to-b from-neutral-50 to-background">
+  return <section id="contacto" className="section-container bg-gradient-to-b from-neutral-50 to-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="section-title fade-in-up stagger-1">
@@ -29,11 +27,7 @@ const Contact = () => {
                   Nuestro equipo evaluará tu proyecto y te presentará una propuesta 
                   clara y detallada sin compromiso.
                 </p>
-                <Button 
-                  onClick={() => window.open('https://forms.clickup.com/90131266734/f/2ky3vz5e-6233/QTQTM1XATN9SHKOUUG', '_blank')}
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 inline-flex items-center gap-2 scale-in stagger-3"
-                >
+                <Button onClick={() => window.open('https://forms.clickup.com/90131266734/f/2ky3vz5e-6233/QTQTM1XATN9SHKOUUG', '_blank')} size="lg" className="bg-white text-primary hover:bg-white/90 inline-flex items-center gap-2 scale-in stagger-3">
                   Solicitá tu presupuesto sin cargo
                   <ArrowRight size={18} />
                 </Button>
@@ -54,51 +48,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8 slide-in-right stagger-4">
-            <Card className="shadow-lg border-0 rotate-in stagger-1">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-neutral-800 mb-6 fade-in-up stagger-1">
-                  Información de contacto
-                </h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4 fade-in-left stagger-2">
-                    <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
-                      <Phone className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-neutral-800">Teléfono</p>
-                      <p className="text-neutral-600">+54 11 1234-5678</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 fade-in-left stagger-3">
-                    <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
-                      <Mail className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-neutral-800">Email</p>
-                      <p className="text-neutral-600">info@construirvalor.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 fade-in-left stagger-4">
-                    <div className="bg-primary/10 p-3 rounded-lg scale-in stagger-1">
-                      <MapPin className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-neutral-800">Ubicación</p>
-                      <p className="text-neutral-600">Buenos Aires, Argentina</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
