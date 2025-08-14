@@ -46,7 +46,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/91565941-6d44-41df-bc13-a36db91ddf80.png" 
+              src="/lovable-uploads/e9e6f94c-22f9-4dfa-bc1e-067bed53a358.png" 
               alt="Construir Valor" 
               className="h-8 md:h-10 w-auto"
             />
