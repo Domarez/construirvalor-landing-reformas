@@ -14,10 +14,10 @@ const App = () => (
         <TooltipProvider>
             <Toaster />
             <Sonner />
-            <BrowserRouter> {/* 👈 Elimina basename */}
+            <BrowserRouter basename="/reformas">
                 <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/gracias" element={<ThankYou />} />
+                    <Route index element={<Index />} />
+                    <Route path="gracias" element={<ThankYou />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
