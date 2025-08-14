@@ -48,41 +48,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8 slide-in-right stagger-4">
-            <div className="fade-in-up stagger-1">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 slide-in-right stagger-2">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-neutral-800">Teléfono</p>
-                    <p className="text-neutral-600">+54 11 1234-5678</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 slide-in-right stagger-3">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-neutral-800">Email</p>
-                    <p className="text-neutral-600">info@construirvalor.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 slide-in-right stagger-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-neutral-800">Ubicación</p>
-                    <p className="text-neutral-600">Ciudad Autónoma de Buenos Aires</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
