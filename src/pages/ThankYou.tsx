@@ -9,6 +9,15 @@ const ThankYou = () => {
     // Add scroll animation classes when component mounts
     const elements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .scale-in, .zoom-in');
     elements.forEach(el => el.classList.add('animate'));
+    
+    // Fire GTM conversion event
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        'event': 'conversion',
+        'conversion_type': 'form_submission',
+        'page_title': 'Thank You - Construir Valor'
+      });
+    }
   }, []);
   return <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
