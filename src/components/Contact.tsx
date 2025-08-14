@@ -35,15 +35,7 @@ const Contact = () => {
             </Card>
 
             <Card className="shadow-lg border-0">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-neutral-800 mb-4">
-                  Respuesta garantizada en 24 horas
-                </h3>
-                <p className="text-neutral-600">
-                  Iniciamos trabajos inmediatamente con capital propio, 
-                  sin pedirte anticipos ni comprometer tu flujo de caja.
-                </p>
-              </CardContent>
+              
             </Card>
           </div>
 
