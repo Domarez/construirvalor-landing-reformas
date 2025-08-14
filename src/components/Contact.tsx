@@ -14,7 +14,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="flex justify-center">
           {/* CTA Section */}
           <div className="space-y-8 slide-in-left stagger-3">
             <Card className="shadow-xl border-0 bg-primary text-primary-foreground zoom-in stagger-1">
