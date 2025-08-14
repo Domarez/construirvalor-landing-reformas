@@ -50,10 +50,6 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8 slide-in-right stagger-4">
             <div className="fade-in-up stagger-1">
-              <h3 className="text-2xl font-semibold text-neutral-800 mb-8">
-                Contactanos
-              </h3>
-              
               <div className="space-y-6">
                 <div className="flex items-center gap-4 slide-in-right stagger-2">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -86,19 +82,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <Card className="shadow-lg border-0 bg-neutral-50">
-              <CardContent className="p-8">
-                <h4 className="text-lg font-semibold text-neutral-800 mb-4">
-                  Horarios de atención
-                </h4>
-                <div className="space-y-2 text-neutral-600">
-                  <p><span className="font-medium">Lunes a Viernes:</span> 8:00 - 18:00</p>
-                  <p><span className="font-medium">Sábados:</span> 9:00 - 13:00</p>
-                  <p><span className="font-medium">Emergencias:</span> 24/7</p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
