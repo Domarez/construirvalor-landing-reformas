@@ -3,18 +3,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-
 const ThankYou = () => {
   const navigate = useNavigate();
-
   useEffect(() => {
     // Add scroll animation classes when component mounts
     const elements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .scale-in, .zoom-in');
     elements.forEach(el => el.classList.add('animate'));
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-background">
+  return <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="text-center space-y-8">
           {/* Success Icon */}
@@ -84,31 +80,20 @@ const ThankYou = () => {
 
           {/* Contact Information */}
           <div className="text-center text-neutral-600 fade-in-up stagger-6">
-            <p className="mb-2">¿Tenés alguna consulta urgente?</p>
-            <p className="font-medium">
-              Llamanos al <span className="text-primary">+54 11 1234-5678</span>
-            </p>
-            <p className="text-sm">
-              o escribinos a <span className="text-primary">info@construirvalor.com</span>
-            </p>
+            
+            
+            
           </div>
 
           {/* Back to Home Button */}
           <div className="pt-8 scale-in stagger-7">
-            <Button 
-              onClick={() => navigate('/')}
-              size="lg"
-              variant="outline"
-              className="inline-flex items-center gap-2"
-            >
+            <Button onClick={() => navigate('/')} size="lg" variant="outline" className="inline-flex items-center gap-2">
               <ArrowLeft size={18} />
               Volver al inicio
             </Button>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ThankYou;
