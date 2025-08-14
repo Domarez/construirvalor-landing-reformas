@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/reformas/:path*",
-      "destination": "https://reformasempresas.vercel.app/:path*"
-    }
-  ]
-}
