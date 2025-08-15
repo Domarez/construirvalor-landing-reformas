@@ -3,6 +3,8 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import constructionImage from '@/assets/construction-work.jpg';
 import receptionImage from '@/assets/reception-area.jpg';
+import universidadImage from '@/assets/maimodes.jpg';
+
 
 const Services = () => {
   const scrollToContact = () => {
@@ -41,7 +43,7 @@ const Services = () => {
         "Baños, aulas, accesos, iluminación, seguridad",
         "Planificación por etapas, con documentación completa"
       ],
-      image: constructionImage
+      image: universidadImage
     }
   ];
 
